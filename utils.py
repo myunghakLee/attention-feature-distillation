@@ -59,8 +59,7 @@ def train_kl(module_list, optimizer, criterion, train_loader, device, args):
         module.train()
     module_list[-1].eval()
 
-    model_s = module_list[0]
-    model_t = module_list[-1]
+    model = module_list[0]
 
     losses = AverageMeter()
     top1 = AverageMeter()
